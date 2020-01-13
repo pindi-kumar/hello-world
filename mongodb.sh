@@ -2,7 +2,7 @@
 echo " start build"
 
 
-mvn package
+mvn clean package
 
 #echo "BUILD_TAG" :: $BUILD_TAG
 #echo "EXECUTOR_NUMBER" :: $EXECUTOR_NUMBER
