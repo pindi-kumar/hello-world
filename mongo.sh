@@ -71,7 +71,7 @@ if [ $nib !== $cib ] ;
           nbr4=4
           nbr5=kumar
 
-        mongo  --host="13.232.198.178:27017"  build   <<EOF > ci_commitid.txt
+        mongo  --host="35.154.99.113:27017"  build   <<EOF > ci_commitid.txt
         var build_tag ="$nbr1" ;
         var node_name ="$nbr2" ;
         var workspace ="$nbr3" ;
