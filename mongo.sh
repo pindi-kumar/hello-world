@@ -15,7 +15,7 @@ if [ $exitstatus == 0 ] ;
         nbr2=$NODE_NAME
         nbr3=$WORKSPACE
         nbr4=$GIT_COMMIT 
-        nbr5=$GIT_COMMIT 
+        nbr5=$GIT_BRANCH 
 
       mongo  --host="35.154.99.113:27017"  build   <<EOF 
       var build_tag ="$nbr1" ;
