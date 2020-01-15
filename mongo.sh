@@ -70,11 +70,11 @@ if [ $nib != $cib ] ;
     if [ $exitstatus == 0 ] ;
       then
   	    echo " send the details to mongodb"
-          nbr1=1
-          nbr2=2
-          nbr3=3
-          nbr4=4
-          nbr5=kumar
+          nbr1=$build_tag
+          nbr2=$NODE_NAME
+          nbr3=$WORKSPACE
+          nbr4=$GIT_COMMIT
+          nbr5=$GIT_BRANCH
 
         mongo  --host="35.154.99.113:27017"  build   <<EOF > ci_commitid.txt
         var build_tag ="$nbr1" ;
