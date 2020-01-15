@@ -55,8 +55,13 @@ EOF
 EOF
 
 cib=$(cat ci_commitid.txt | grep -i git_commit | awk -F ":" '{ print $2 }')
-
+echo " "
+echo "last success commit id of CI-BUILD:::::$cib#######"
+echo " "
 nib=$(cat nigtly_commitid.txt | grep -i git_commit | awk -F ":" '{ print $2 }' )
+echo " "
+echo "last success commit id of NIGHTLY-BUILD:::::$nib####"
+echo " "
 
 if [ $nib != $cib ] ;
   then
