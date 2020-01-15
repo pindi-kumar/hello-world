@@ -11,11 +11,11 @@
 if [ $exitstatus == 0 ] ;
   then
     echo " send the details to mongodb"
-        nbr1=BUILD_TAG
-        nbr2=NODE_NAME
-        nbr3=WORKSPACE
-        nbr4=GIT_COMMIT 
-        nbr5=GIT_COMMIT 
+        nbr1=$BUILD_TAG
+        nbr2=$NODE_NAME
+        nbr3=$WORKSPACE
+        nbr4=$GIT_COMMIT 
+        nbr5=$GIT_COMMIT 
 
       mongo  --host="35.154.99.113:27017"  build   <<EOF 
       var build_tag ="$nbr1" ;
