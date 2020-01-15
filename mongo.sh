@@ -58,7 +58,7 @@ cib=$(cat ci_commitid.txt | grep -i git_commit | awk -F ":" '{ print $2 }')
 
 nib=$(cat nigtly_commitid.txt | grep -i git_commit | awk -F ":" '{ print $2 }' )
 
-if [ $nib !== $cib ] ;
+if [ $nib != $cib ] ;
   then
   	mvn clean package ;
   	exitstatus=$?
