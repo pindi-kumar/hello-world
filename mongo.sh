@@ -50,7 +50,7 @@ NIGHTLY_BUILD ( ) {
 EOF
 
     mongo  --host="35.154.99.113:27017"   build    <<EOF > ci_commitid.txt
-     db.nightly_build.find().sort({_id:-1}).limit(1).pretty() ;
+     db.ci_build.find().sort({_id:-1}).limit(1).pretty() ;
 
 EOF
 
