@@ -17,7 +17,7 @@ if [ $exitstatus == 0 ] ;
         nbr4=$GIT_COMMIT 
         nbr5=$GIT_BRANCH 
 
-      mongo  --host="35.154.99.113:27017"  build   <<EOF 
+      mongo  --host="15.206.169.239:27017"  build   <<EOF 
       var build_tag ="$nbr1" ;
       var node_name ="$nbr2" ;
       var workspace ="$nbr3" ;
@@ -44,12 +44,12 @@ fi
 
 NIGHTLY_BUILD ( ) {
 
-     mongo  --host="35.154.99.113:27017"   build    <<EOF > nigtly_commitid.txt
+     mongo  --host="15.206.169.239:27017"   build    <<EOF > nigtly_commitid.txt
      db.nightly_build.find().sort({_id:-1}).limit(1).pretty() ;
 
 EOF
 
-    mongo  --host="35.154.99.113:27017"   build    <<EOF > ci_commitid.txt
+    mongo  --host="15.206.169.239:27017"   build    <<EOF > ci_commitid.txt
      db.ci_build.find().sort({_id:-1}).limit(1).pretty() ;
 
 EOF
@@ -76,7 +76,7 @@ if [ $nib != $cib ] ;
           nbr4=$GIT_COMMIT
           nbr5=$GIT_BRANCH
 
-        mongo  --host="35.154.99.113:27017"  build   <<EOF > ci_commitid.txt
+        mongo  --host="15.206.169.239:27017"  build   <<EOF > ci_commitid.txt
         var build_tag ="$nbr1" ;
         var node_name ="$nbr2" ;
         var workspace ="$nbr3" ;
